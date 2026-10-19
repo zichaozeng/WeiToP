@@ -1,0 +1,145 @@
+:root {
+  color-scheme: light;
+  --accent: #5b50d6;
+  --text: #30323d;
+  --muted: #626673;
+}
+
+body {
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: #4237ac;
+}
+
+a:focus-visible,
+.citation:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.publication-header .hero-body {
+  padding: 4.5rem 1.5rem 1.75rem;
+}
+
+.project-name {
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+}
+
+.publication-title {
+  margin-bottom: 1.75rem;
+  font-size: clamp(1.9rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.title-lead {
+  color: var(--accent);
+}
+
+.publication-authors {
+  margin: 0 auto;
+  max-width: 48rem;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-venue {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.publication-links .button {
+  min-width: 6rem;
+  padding-inline: 1.5rem;
+}
+
+.section {
+  padding: 2rem 1.5rem;
+}
+
+.text-column {
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+.abstract-text {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  text-align: justify;
+}
+
+.citation {
+  padding: 1.5rem;
+  border: 1px solid #e5e6ec;
+  border-radius: 0.5rem;
+  background: #f7f7fa;
+  color: var(--text);
+  font-size: 0.85rem;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.footer {
+  margin-top: 2rem;
+  padding: 2rem 1.5rem;
+  background: #fafafb;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+  .publication-header .hero-body {
+    padding-top: 2.75rem;
+  }
+
+  .publication-title {
+    font-size: 1.85rem;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .publication-authors {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding-inline: 1.25rem;
+  }
+
+  .abstract-text {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .citation {
+    padding: 1rem;
+  }
+}

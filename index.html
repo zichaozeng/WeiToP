@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="WeiToP and WeiAD: flexible visual place recognition through weighted optimal transport aggregation and token pruning.">
+  <meta name="keywords" content="WeiToP, WeiAD, Visual Place Recognition, Token Pruning, Optimal Transport, DINOv2">
+  <title>WeiToP &amp; WeiAD | Faster or Stronger</title>
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+  <header class="hero publication-header">
+    <div class="hero-body">
+      <div class="container is-max-desktop has-text-centered">
+        <p class="project-name">WeiToP &amp; WeiAD</p>
+        <h1 class="title publication-title">
+          <span class="title-lead">Faster or Stronger:</span><br>
+          Towards Flexible Visual Place Recognition<br class="desktop-break">
+          via Weighted Aggregation and Token Pruning
+        </h1>
+        <p class="publication-authors">
+          <span class="author-block">Zichao Zeng</span>,
+          <span class="author-block">June Moh Goo</span>,
+          <span class="author-block">Junwei Zheng</span>,
+          <span class="author-block">Weijia Fan</span>,
+          <span class="author-block">Jiaming Zhang</span>,
+          <span class="author-block">Rainer Stiefelhagen</span>,
+          <span class="author-block">Jan Boehm</span>
+        </p>
+        <p class="publication-venue">arXiv 2026</p>
+        <nav class="publication-links" aria-label="Publication links">
+          <a class="button is-dark is-rounded" href="https://arxiv.org/abs/2605.20551">arXiv</a>
+          <a class="button is-dark is-rounded" href="https://arxiv.org/pdf/2605.20551">PDF</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="abstract" aria-labelledby="abstract-title">
+      <div class="container is-max-desktop">
+        <div class="text-column">
+          <h2 class="title is-3 has-text-centered" id="abstract-title">Abstract</h2>
+          <div class="content abstract-text">
+            <p>Visual Place Recognition (VPR) aims to match a query image to reference images of the same place in a large-scale database. Recent state-of-the-art methods employ Vision Transformers (ViTs) as backbone foundation models to extract patch-level features that are robust to viewpoint, illumination, and seasonal variations, which are then aggregated into a compact global descriptor for retrieval. Most existing aggregation methods uniformly pool patch tokens into learned clusters, despite the fact that different clusters often encode distinct spatial or semantic patterns and contribute unequally to VPR performance. To address this limitation, we propose Weighted Aggregated Descriptor (WeiAD), which assigns weights to clusters during aggregation, producing more discriminative global representations. Beyond accuracy, retrieval latency is a critical concern for large-scale deployments and resource-constrained edge devices. Prior work mainly reduces latency by compressing global descriptors, while overlooking the cost of feature extraction, an issue exacerbated by ViT-based backbones. We therefore introduce WeiToP, a VPR-oriented token pruning framework that reduces feature extraction cost via self-distillation, where aggregation-induced token importance supervises a lightweight pruning module attached to an early transformer layer, enabling inference-time token pruning. After a single joint training phase, WeiToP enables plug-and-play token pruning at inference time, allowing flexible and on-demand control over the accuracy–efficiency trade-off without additional training. Moreover, WeiToP outperforms existing token pruning methods adapted from general vision tasks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX" aria-labelledby="citation-title">
+      <div class="container is-max-desktop">
+        <div class="text-column">
+          <h2 class="title is-3" id="citation-title">BibTeX</h2>
+          <pre class="citation" tabindex="0" aria-label="BibTeX citation"><code>@misc{zeng2026weitop,
+  title={Faster or Stronger: Towards Flexible Visual Place Recognition via Weighted Aggregation and Token Pruning},
+  author={Zichao Zeng and June Moh Goo and Junwei Zheng and Weijia Fan and Jiaming Zhang and Rainer Stiefelhagen and Jan Boehm},
+  year={2026},
+  eprint={2605.20551},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2605.20551}
+}</code></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container is-max-desktop has-text-centered">
+      <p>
+        Website template adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>,
+        created by <a href="https://keunhong.com/">Keunhong Park</a>.
+        Licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
